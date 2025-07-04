@@ -1,11 +1,16 @@
 "use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import Image from 'next/image';
 
 const Tensorbuilds = () => {
   const [videoActive, setVideoActive] = useState(false);
   const videoId = "RMUHAWTKOOE";
+  const [imgSrc, setImgSrc] = useState(
+    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  );
 
   return (
     <section className="lg:py-20 px-4 space-y-16 bg-[#121212]" id="tensorbuilds">
@@ -92,11 +97,11 @@ const Tensorbuilds = () => {
           <div className="aspect-video mb-6 rounded-xl overflow-hidden relative bg-black border-2 border-[#333355]">
             {!videoActive ? (
               <div className="w-full h-full relative">
-                {/* YouTube Thumbnail */}
                 <img
-                  src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                  src={imgSrc}
                   alt="YouTube Video Thumbnail"
                   className="w-full h-full object-cover"
+
                   onError={(e) => {
                     e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                   }}

@@ -77,14 +77,16 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/about-image.png" alt="Descriptive text about the image"   width={500}  // Set actual dimensions
+  height={500}
+  className="rounded-full border-4 border-white shadow-xl"/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          I'm a tech enthusiast and computer engineering student, currently co-founding a college startup developing AI-powered solutions in fitness and health. 
+          I&apos;m a tech enthusiast and computer engineering student, currently co-founding a college startup developing AI-powered solutions in fitness and health. 
           I combine a strong software development background with a deep interest in research, often diving into advanced topics in computer science. 
-          I'm also the creator of the YouTube channel Think Outside the Box, where we share insightful technical content. 
-          Outside of tech, I enjoy exploring the works of Dostoevsky and pushing the boundaries of what's possible with AI.
+          I&apos;m also the creator of the YouTube channel Think Outside the Box, where we share insightful technical content. 
+          Outside of tech, I enjoy exploring the works of Dostoevsky and pushing the boundaries of what&apos;s possible with AI.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
