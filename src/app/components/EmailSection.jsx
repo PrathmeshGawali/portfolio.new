@@ -53,16 +53,20 @@ const EmailSection = () => {
           {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          definitely get back to you !
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/PrathmeshGawali">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/prathmesh-gawali-19231324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
+        <p className="text-[#ADB7BE] mb-4 max-w-md">
+          {" "}
+          Contact No: +91 95525 10715
+        </p>
       </div>
       <div>
         {emailSubmitted ? (

@@ -7,58 +7,77 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Bulkbites - AI Fitness App",
+    description: "AI-driven app for food recognition, nutrient tracking, recipe suggestions, and pose correction.",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "AI/ML"],
+    techstack: ["Python", "TensorFlow", "OpenCV", "React Native"],
+    gitUrl: "https://bulkbites.tensorbuilds.tech/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "SynapseIQ - Multimodal RAG Learning Assistant",
+    description: "Web-based learning assistant using Streamlit and RAG to generate summaries, flashcards, quizzes, and mind maps.",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Web", "AI/ML"],
+    techstack: ["Python", "Streamlit", "LangChain", "LLMs"],
+    gitUrl: "https://github.com/PrathmeshGawali/synapse_final",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Chatmate - AI Browser Assistant",
+    description: "Browser extension that helps understand webpages and gain more insights using AI.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Web", "AI/ML"],
+    techstack: ["JavaScript", "Chrome Extension API", "NLP"],
+    gitUrl: "https://github.com/PrathmeshGawali/Chatmate",
   },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+{
+  "id": 4,
+  "title": "Image Colorization Autoencoder",
+  "description": "Deep learning model that converts grayscale images to color using a convolutional autoencoder architecture.",
+  "image": "/images/projects/4.png",
+  "tag": ["All", "Deep Learning"],
+  "techstack": ["TensorFlow", "Keras", "OpenCV", "Python"],
+  "gitUrl": "https://github.com/PrathmeshGawali/BlackAndWhitetoColor"
+},
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Movie Recommendation System",
+    description: "ML-based project that recommends movies based on user preferences.",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "AI/ML"],
+    techstack: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+    gitUrl: "https://colab.research.google.com/drive/1tTpZk0kkrzg5K0OhnI2KPgPj3Uw-hsO6?usp=sharing",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "Stock Price Prediction",
+    description: "Analyzes historical prices and compares future stock price accuracy using various ML models.",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "AI/ML"],
+    techstack: ["Python", "TensorFlow", "Pandas", "Matplotlib"],
+    gitUrl: "https://colab.research.google.com/drive/1HkJVGg8e22N5CS4OliAmdhvaLpmexVxs?usp=sharing",
   },
+
+  {
+    id: 7,
+    title: "Drowsiness Detection System",
+    description: "Eye detection based drowsiness detection using OpenCV, Dlib, and Pygame.",
+    image: "/images/projects/7.png",
+    tag: ["All", "AI/ML"],
+    techstack: ["Python", "OpenCV", "Dlib", "Pygame"],
+    gitUrl: "https://github.com/PrathmeshGawali/Simple-Drowsiness-Detection-System",
+  },
+  {
+    id: 8,
+    title: "Meme Generator",
+    description: "React.js based project used to generate random memes and download them.",
+    image: "/images/projects/8.jpeg",
+    tag: ["All", "Web"],
+    techstack: ["React.js", "JavaScript", "CSS"],
+    gitUrl: "https://github.com/PrathmeshGawali/Meme-react",
+  }
 ];
 
 const ProjectsSection = () => {
@@ -97,8 +116,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="AI/ML"
+          isSelected={tag === "AI/ML"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -116,7 +135,7 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
+              techstack={project.techstack}
             />
           </motion.li>
         ))}

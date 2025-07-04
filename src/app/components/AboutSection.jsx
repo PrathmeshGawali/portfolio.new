@@ -9,32 +9,56 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
         <li>JavaScript</li>
-        <li>React</li>
+        <li>SQL</li>
       </ul>
     ),
   },
   {
-    title: "Education",
-    id: "education",
+    title: "Libraries",
+    id: "libraries",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Next.js</li>
+        <li>React.js</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Sklearn</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Pytorch</li>
+        <li>OpenCV</li>
+        <li>TensorFlow</li>
+        <li>Langchain</li>
       </ul>
     ),
   },
+
   {
-    title: "Certifications",
-    id: "certifications",
+    title: " Accompaniment",
+    id: " accompaniment",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Canva</li>
+        <li>Figma</li>
+        <li>Adobe Express</li>
+        <li>Video Editing (Cap-Cut, Filmora, In-Short)</li>
+      </ul>
+    ),
+  },
+
+  {
+    title: "Certificates",
+    id: " certificates",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>NPTEL : Introduction To Machine Learning - IITKGP</li>
+        <li>NPTEL : Deep Learning - IITKGP</li>
       </ul>
     ),
   },
@@ -57,12 +81,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I'm a tech enthusiast and computer engineering student, currently co-founding a college startup developing AI-powered solutions in fitness and health. 
+          I combine a strong software development background with a deep interest in research, often diving into advanced topics in computer science. 
+          I'm also the creator of the YouTube channel Think Outside the Box, where we share insightful technical content. 
+          Outside of tech, I enjoy exploring the works of Dostoevsky and pushing the boundaries of what's possible with AI.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -73,18 +95,27 @@ const AboutSection = () => {
               Skills{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("libraries")}
+              active={tab === "libraries"}
             >
               {" "}
-              Education{" "}
+              Libraries{" "}
             </TabButton>
+
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange(" certificates")}
+              active={tab === " certificates"}
             >
               {" "}
-              Certifications{" "}
+              Certificates{" "}
+            </TabButton>
+            
+            <TabButton
+              selectTab={() => handleTabChange(" accompaniment")}
+              active={tab === " accompaniment"}
+            >
+              {" "}
+              Accompaniments{" "}
             </TabButton>
           </div>
           <div className="mt-8">
