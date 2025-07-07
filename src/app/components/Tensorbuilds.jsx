@@ -165,17 +165,23 @@ const Tensorbuilds = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="col-span-5 bg-gradient-to-br from-[#0d0d0d] to-[#1a1a2e] p-8 rounded-2xl shadow-2xl border border-[#2d2d42]"
         >
-          <div className="flex items-center mb-8">
-            <div className="bg-gradient-to-r from-violet-600 to-pink-700 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
-              <span className="text-2xl">🍽️</span>
-            </div>
-            <div>
-              <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-600 text-3xl font-bold font-sans tracking-tight">
-                BulkBites
-              </h2>
-              <p className="text-violet-300 mt-1">AI-Powered Nutrition Tracking</p>
-            </div>
+        <div className="flex items-center mb-8">
+          <div className="bg-gradient-to-r from-violet-600 to-pink-700 w-14 h-14 rounded-xl flex items-center justify-center mr-4 overflow-hidden">
+            <Image 
+              src="/images/bulkbites_logo.png" 
+              alt="BulkBites Logo" 
+              width={40} 
+              height={40}
+              className="object-contain p-1"
+            />
           </div>
+          <div>
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-600 text-3xl font-bold font-sans tracking-tight">
+              BulkBites
+            </h2>
+            <p className="text-violet-300 mt-1">AI-Powered Nutrition Tracking</p>
+          </div>
+        </div>
 
           <div className="bg-[#15152b] p-5 rounded-xl mb-8 h-32">
             <p className="text-[#c5cbd3] text-lg">
@@ -201,31 +207,23 @@ const Tensorbuilds = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-violet-400 font-bold mb-3 flex items-center gap-2 text-lg">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path
-                    fillRule="evenodd"
-                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
                 Core Features
               </h3>
               <ul className="text-[#c5cbd3] space-y-3">
                 <li className="flex items-start">
-                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0">✓</span>
+                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0"></span>
                   <span className="font-medium">AI-powered food recognition with 96% accuracy</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0">✓</span>
+                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0"></span>
                   <span className="font-medium">Detailed calorie & nutrient analysis per 100g</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0">✓</span>
+                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0"></span>
                   <span className="font-medium">Professional-grade UI/UX for health tracking</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0">✓</span>
+                  <span className="bg-violet-900 w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0"></span>
                   <span className="font-medium">Offline functionality with cloud sync</span>
                 </li>
               </ul>
@@ -233,37 +231,54 @@ const Tensorbuilds = () => {
 
             <div>
               <h3 className="text-pink-400 font-bold mb-3 flex items-center gap-2 text-lg">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
                 Technology Stack
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-[#1f1f3a] p-3 rounded-lg flex items-center">
                   <div className="bg-violet-900 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                    <span className="text-lg">⚛️</span>
+                    <span className="text-lg"><Image 
+              src="/images/bulkbites_logo.png" 
+              alt="BulkBites Logo" 
+              width={40} 
+              height={40}
+              className="object-contain p-1"
+            /> </span>
                   </div>
                   <span className="font-medium">React Native</span>
                 </div>
                 <div className="bg-[#1f1f3a] p-3 rounded-lg flex items-center">
                   <div className="bg-violet-900 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                    <span className="text-lg">🐍</span>
+                    <span className="text-lg"><Image 
+              src="/images/bulkbites_logo.png" 
+              alt="BulkBites Logo" 
+              width={40} 
+              height={40}
+              className="object-contain p-1"
+            /> </span>
                   </div>
                   <span className="font-medium">Python</span>
                 </div>
                 <div className="bg-[#1f1f3a] p-3 rounded-lg flex items-center">
                   <div className="bg-violet-900 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                    <span className="text-lg">🔶</span>
+                    <span className="text-lg"><Image 
+              src="/images/bulkbites_logo.png" 
+              alt="BulkBites Logo" 
+              width={40} 
+              height={40}
+              className="object-contain p-1"
+            /></span>
                   </div>
                   <span className="font-medium">Oracle DB</span>
                 </div>
                 <div className="bg-[#1f1f3a] p-3 rounded-lg flex items-center">
                   <div className="bg-violet-900 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                    <span className="text-lg">👁️</span>
+                    <span className="text-lg"><Image 
+              src="/images/bulkbites_logo.png" 
+              alt="BulkBites Logo" 
+              width={40} 
+              height={40}
+              className="object-contain p-1"
+            /></span>
                   </div>
                   <span className="font-medium">YOLO Vision</span>
                 </div>
