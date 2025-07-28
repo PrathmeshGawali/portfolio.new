@@ -1,8 +1,47 @@
 import React from 'react';
-import { FaServer, FaFileAlt, FaCalendarAlt, FaChalkboardTeacher, FaUsers, FaMedal } from 'react-icons/fa';
+import { FaServer, FaFileAlt, FaCalendarAlt, FaChalkboardTeacher, FaUsers, FaMedal, FaBriefcase, FaLaptopCode, FaRobot, FaEye } from 'react-icons/fa';
 
 const Activities = () => {
   const activities = [
+    // Internships
+    {
+      id: 7,
+      title: "Computer Vision & AI Intern",
+      icon: <FaEye className="text-cyan-500" />,
+      date: "June 2025 - Current",
+      organization: "Sattvarise Technologies",
+      description: "Working on American Football Computer Vision Project developing modules for video analysis and player movement tracking.",
+      color: "bg-cyan-100 border-cyan-500"
+    },
+    {
+      id: 8,
+      title: "Co-Founder",
+      icon: <FaBriefcase className="text-yellow-500" />,
+      date: "Nov 2024 - Current",
+      organization: "Tensorbuilds",
+      description: "Founded AI startup developing SAAS products including Bulkbites AI fitness app and Chatmate browser assistant.",
+      color: "bg-yellow-100 border-yellow-500"
+    },
+    {
+      id: 9,
+      title: "Web Development Intern",
+      icon: <FaLaptopCode className="text-indigo-500" />,
+      date: "2023",
+      organization: "AHEN.co",
+      description: "Developed web applications using React.js during internship.",
+      color: "bg-indigo-100 border-indigo-500"
+    },
+    {
+      id: 10,
+      title: "Data Science Intern",
+      icon: <FaRobot className="text-pink-500" />,
+      date: "2023",
+      organization: "CodeClause",
+      description: "Worked on data analysis and machine learning projects during internship.",
+      color: "bg-pink-100 border-pink-500"
+    },
+    
+    // Original activities
     {
       id: 1,
       title: "Hosted a private server",
@@ -85,7 +124,6 @@ const Activities = () => {
                 {/* Date */}
                 <div className={`flex items-center justify-center w-20 h-20 rounded-full ${activity.color} border-2 mb-4 md:mb-0 md:w-32 md:h-32`}>
                   <div className="text-center">
-                    <div className="text-2xl mb-1 flex justify-center">{activity.icon}</div>
                     <p className="text-sm md:text-base font-medium text-gray-800">{activity.date}</p>
                   </div>
                 </div>
